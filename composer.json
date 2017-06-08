@@ -1,0 +1,46 @@
+{
+	"name": "sllite/yii2-blog",
+	"description": "Yii 2 Blog",
+	"keywords": ["yii2", "blog", "yii2blog", "yii 2 blog"],
+	"homepage": "http://www.sllite.ru/",
+	"type": "project",
+	"license": "BSD-3-Clause",
+	"minimum-stability": "dev",
+	"require": {
+		"php": ">=5.4.0",
+		"yiisoft/yii2": "2.0.x",
+		"yiisoft/yii2-bootstrap": "*",
+		"yiisoft/yii2-swiftmailer": "*",
+		"nodge/yii2-eauth": "~2.0",
+		"pjhl/yii2-multilanguage": "~0.2"
+	},
+    "require-dev": {
+        "yiisoft/yii2-codeception": "*",
+        "codeception/codeception": "*",
+        "codeception/specify": "*",
+        "codeception/verify": "*",
+		"yiisoft/yii2-debug": "*",
+		"yiisoft/yii2-gii": "*"
+	},
+	"scripts": {
+		"post-create-project-cmd": [
+			"yii\\composer\\Installer::setPermission"
+		]
+	},
+	"config": {
+		"process-timeout": 1800
+	},
+	"extra": {
+		"writable": [
+			"backend/runtime",
+			"backend/web/assets",
+
+			"frontend/runtime",
+			"frontend/web/assets"
+		],
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+	}
+}
